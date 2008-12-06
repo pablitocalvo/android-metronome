@@ -1,0 +1,19 @@
+Android Metronome
+-----------------
+
+This is a metronome application for the Android Mobile Platform.
+
+The application is licensed under GPLv3.  Please look at the
+COPYING file for licensing details.
+
+BUILDING
+--------
+
+To build the application, load the project in Eclipse that has
+been configured with the Android SDK.
+
+CONTACT
+-------
+
+You can contact the author, Akshat Aranya, at aaranya at gmail dot com
+for any questions/comments/bug reports/etc.
