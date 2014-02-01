@@ -1,24 +1,24 @@
 /*
- * Copyright: 2008 Akshat Aranya
+ * Copyright: 2008-2014 Akshat Aranya
  *
- *    This file is part of Metronome.
+ *    This file is part of Mytronome.
  *
- * Metronome is free software: you can redistribute it and/or modify
+ * Mytronome is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Metronome is distributed in the hope that it will be useful,
+ * Mytronome is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Metronome.  If not, see <http://www.gnu.org/licenses/>.
+ * along with Mytronome.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 
-package com.example.android;
+package org.coolfrood.mytronome;
 
 
 
@@ -33,7 +33,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class Metronome extends Activity {
+public class Mytronome extends Activity {
 	
 	
 	boolean mRunning = false;
@@ -109,7 +109,7 @@ public class Metronome extends Activity {
 	/*
 	protected void onPause()
 	{
-		Log.v("Metronome", "onPause called");
+		Log.v("Mytronome", "onPause called");
 		super.onPause();
 		if (mRunning)
 			changeState();
@@ -118,7 +118,7 @@ public class Metronome extends Activity {
 	}*/
 	
 	protected void onStop() {
-		//Log.v("Metronome", "onStop");
+		//Log.v("Mytronome", "onStop");
 		super.onStop();
 		/*
 		if (mRunning) {
@@ -138,11 +138,11 @@ public class Metronome extends Activity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
-    	//Log.v("Metronome", "onCreate");
+    	//Log.v("Mytronome", "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 		PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-		mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MetronomeLock");
+		mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MytronomeLock");
         tp = new TickPlayer(this);
         mStartStopButton = (Button) findViewById(R.id.startstop);
        
@@ -243,17 +243,17 @@ public class Metronome extends Activity {
     }
 /*
     protected void onPause() {
-    	Log.v("Metronome", "onPause");
+    	Log.v("Mytronome", "onPause");
     	super.onPause();
     }
     protected void onResume() {
-    	Log.v("Metronome", "onResume");
+    	Log.v("Mytronome", "onResume");
     	super.onResume();
     }
     */
     
     protected void onDestroy() {
-    	//Log.v("Metronome", "onDestroy");
+    	//Log.v("Mytronome", "onDestroy");
     	if (mRunning) {
     		changeState();
     	}
